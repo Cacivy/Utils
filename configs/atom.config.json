@@ -1,0 +1,61 @@
+/*Atom 1.8.0*/
+
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "ed06de1e-bac9-4c2a-91b6-db1637fddb78"
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 96
+        green: 125
+        blue: 139
+        alpha: 1
+      predefinedColor: "Blue Grey"
+    tabs:
+      compactTabs: true
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  atomatigit: {}
+  core:
+    audioBeep: false
+    autoHideMenuBar: true
+    closeEmptyWindows: false
+    disabledPackages: [
+      "activate-power-mode"
+    ]
+    themes: [
+      "atom-material-ui"
+      "oceanic-next"
+    ]
+  docblockr:
+    auto_add_method_tag: true
+    override_js_var: true
+  editor:
+    fontFamily: "consolas"
+    fontSize: 18
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "bc2250be-d966-640a-f41b-611f787a3b24"
+  "git-plus": {}
+  linter: {}
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+  welcome:
+    showOnStartup: false
+".html.text.vue":
+  editor:
+    showIndentGuide: false

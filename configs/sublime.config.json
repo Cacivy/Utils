@@ -1,0 +1,13 @@
+/*Sublime Text 3*/
+
+{
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"font-face": "Consolas",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"material_theme_accent_orange": true,
+	"theme": "Material-Theme.sublime-theme"
+}

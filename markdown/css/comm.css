@@ -1,0 +1,71 @@
+html, body, #editor {
+  margin: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+textarea, #editor div {
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px;
+  font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+textarea {
+  border: none;
+  border-right: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Monaco', courier, monospace;
+  padding: 20px;
+}
+/*code{
+font-size: 16px;
+font-family: 'consolas';
+}*/
+pre {
+position: relative;
+margin-bottom: 24px;
+border-radius: 3px;
+border: 1px solid #C3CCD0;
+background: #FFF;
+overflow: hidden;
+}
+
+code {
+display: block;
+padding: 12px 24px;
+overflow-y: auto;
+font-weight: 300;
+font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+font-size: 0.8em;
+}
+
+code.has-numbering {
+margin-left: 20px;
+}
+
+.pre-numbering {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 20px;
+margin: 0px 0px 0px 0px;
+padding: 7px 0px 0px 0px;
+/*border-right: 1px solid #C3CCD0;*/
+border-radius: 3px 0 0 3px;
+background: #002b36;
+text-align: center;
+font-family: Menlo, monospace;
+font-size: 0.8em;
+color: #AAA;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/comm.css">
+	<!-- <link rel="stylesheet" href="./lib/styles/monokai-sublime.css"> -->
+	<link rel="stylesheet" href="./lib/styles/solarized-dark.css">
+</head>
+<body>
+	<div id="editor">
+	  <textarea v-model="input" debounce="300"></textarea>
+	  <div v-html="input | marked "></div>
+	</div>
+	<script src="./lib/vue.js"></script>
+	<script src="./lib/marked.js"></script>
+	<script src="./lib/jquery.js"></script>
+	<script src="./lib/highlight.pack.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
