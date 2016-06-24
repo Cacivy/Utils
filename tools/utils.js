@@ -30,6 +30,20 @@ function distinctArr(arr, attr) {
     return list
 }
 
+Array.prototype.distinct= function(attr){
+  var temp = []
+  var list = []
+  for(var i=0;i<this.length;i++){
+        var item = this[i]
+        var val = item[attr]
+        if (temp.indexOf(val) == -1) {
+            temp.push(item[attr])
+            list.push(item)
+        }
+    }
+  return list
+}
+
 /**
  * ajax.get/post 调用
  * @method
