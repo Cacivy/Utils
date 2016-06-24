@@ -1,0 +1,33 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "通用方法以及一些小工具",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2"
+  },
+  "scripts": {
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cacivy/utils.git"
+  },
+  "keywords": [
+    "js",
+    "es6",
+    "markdown",
+    "ava"
+  ],
+  "author": "Cacivy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cacivy/utils/issues"
+  },
+  "homepage": "https://github.com/Cacivy/utils#readme"
+}
