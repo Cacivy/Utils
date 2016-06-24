@@ -1,4 +1,6 @@
 目录
+
+```
 .
 ├── configs ( 一些配置文件的保存 )
 ├── markdown ( 一个基于Web的简单Markdown编辑器 )
@@ -12,3 +14,4 @@
 |   └──  utils.js ( 通用方法整理 )
 ├── package.json
 └── test.js ( TDD单元测试 by ava )
+```
