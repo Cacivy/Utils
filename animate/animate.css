@@ -1,0 +1,106 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #eee;
+}
+input{
+  outline:0px;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+a:link {
+  color: black;
+}
+.head{
+  margin: 0;
+  height: 80px;
+  width: 100%;
+  border-bottom: 20px solid #eee;
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+}
+.search{
+  float: right;
+	line-height: 80px;
+  margin-right: 8%;
+  display: inline-block;
+}
+#search{
+  width:120px;
+  height:30px;
+  padding: 0px 15px 0px 15px;
+  border: 1px solid #eee;
+  border-radius:25px;
+  transition:width .5s,border .5s;
+}
+#search:focus{
+  width: 150px;
+  border: 2px solid #0099FF;
+}
+.Logo{
+  line-height: 80px;
+  display: inline-block;
+  margin-left: 10%;
+  font-size: 25px;
+}
+.Logo span{
+  transition: border-top 2s;
+  -webkit-animation-name: fadeIn; /*动画名称*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+@-webkit-keyframes fadeIn {
+  0% {
+  opacity: 0;
+  }
+  25% {
+  opacity: 0.25;
+  }
+  50% {
+  opacity: 0.5;
+  }
+  75% {
+  opacity: 0.75;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+.body{
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 100px;
+  overflow-y: auto;
+}
+.boxs{
+  column-count:3;
+  column-gap: 20px;
+  column-width: 240px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  -webkit-column-width: 240px;
+}
+.box{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  transition: border-top 2s;
+  -webkit-animation-name: fadeIn; /*动画名称*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.box .preview-image{
+  max-width: 100%;
+}
