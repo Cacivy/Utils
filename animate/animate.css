@@ -18,6 +18,32 @@ a{
 a:link {
   color: black;
 }
+.progress{
+  height: 2px;
+  background-color: blue;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+
+  -webkit-animation: progress 400ms  linear ; /*动画名称*/
+}
+@-webkit-keyframes progress {
+  0%{
+    width: 10%;
+  }
+  25%{
+    width: 25%;
+  }
+  50%{
+    width: 50%;
+  }
+  75%{
+    width: 75%;
+  }
+  100%{
+    width: 100%;
+  }
+}
 .head{
   margin: 0;
   height: 80px;
@@ -26,6 +52,50 @@ a:link {
   background-color: #fff;
   position: fixed;
   top: 0px;
+  z-index: 1;
+}
+.menu{
+  display: inline-block;
+  height: 80px;
+  float: right;
+  margin-right: 12%;
+}
+.menu>ul{
+  line-height: 80px;
+  height: 80px;
+}
+.menu>ul>li{
+  width: 70px;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  transition: border-bottom 1s ;
+  position: relative;
+}
+.menu>ul>li:hover{
+  background-color: #eee;
+  /*border-bottom: 2px solid black;*/
+}
+.menu>ul>li:hover:before{
+  content: '';
+  background-color: black;
+  height: 2px;
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  -webkit-animation-name: long; /*动画名称*/
+  -webkit-animation-duration: .2s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.link{
+  height:80px;
+  overflow:hidden
+}
+.link:hover{
+  height:auto;
 }
 .search{
   float: right;
@@ -50,14 +120,80 @@ a:link {
   display: inline-block;
   margin-left: 10%;
   font-size: 25px;
+    overflow: hidden;
 }
 .Logo span{
+  position: relative;
   transition: border-top 2s;
   -webkit-animation-name: fadeIn; /*动画名称*/
   -webkit-animation-duration: 1s; /*动画持续时间*/
   -webkit-animation-iteration-count: 1; /*动画次数*/
   -webkit-animation-delay: 0s; /*延迟时间*/
 }
+.Logo span:before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 60px;
+  height: 2px;
+  background-color: black;
+
+  -webkit-animation-name: long; /*动画名称*/
+  -webkit-animation-duration: .5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.Logo span:after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 60px;
+  height: 2px;
+  background-color: black;
+
+  /*-webkit-transform: rotate(180deg);*/
+  -webkit-animation-name: right; /*动画名称*/
+  -webkit-animation-duration: .5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+
+@-webkit-keyframes right{
+  0% {
+  right: -60px;
+  }
+  25% {
+  right: -45px;
+  }
+  50% {
+  right: -30px;
+  }
+  75% {
+  right: -15px;
+  }
+  100% {
+  right: 0px;
+  }
+}
+
+@-webkit-keyframes long{
+  0% {
+  width: 0px;
+  }
+  25% {
+  width: 15px;
+  }
+  50% {
+  width: 30px;
+  }
+  75% {
+  width: 45px;
+  }
+  100% {
+  width: 60px;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   0% {
   opacity: 0;
@@ -83,6 +219,10 @@ a:link {
   padding-top: 100px;
   overflow-y: auto;
 
+=======
+  margin-top: 100px;
+}
+.boxs{
   column-count:3;
   -webkit-column-count: 3;
 }
@@ -93,6 +233,9 @@ a:link {
 
   /*-webkit-column-gap: 20px;*/
   /*-webkit-column-width: 240px;*/
+  -webkit-column-gap: 20px;
+  -webkit-column-width: 240px;
+  -webkit-column-break-after: always;
 }
 .box{
   height: 100%;

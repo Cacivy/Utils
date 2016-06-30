@@ -10,8 +10,19 @@
 |   ├── lib
 |   |    └── styles ( highlight主题 )
 |   └──  index.html
+├── animate ( CSS3动画练习 )
 ├── tools
 |   └──  utils.js ( 通用方法整理 )
 ├── package.json
+├── test ( TDD/BDD 浏览器测试 by mocha测试框架 + chai断言库 )
+|   ├── spec
+|   |    └── text.js
+|   └──  index.html
 └── test.js ( TDD单元测试 by ava )
+```
+
+Test
+
+```bach
+ava test.js
 ```

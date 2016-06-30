@@ -34,12 +34,24 @@
       panelContrast: true
       panelShadows: true
   atomatigit: {}
+  "autocomplete-plus": {}
   core:
     audioBeep: false
     autoHideMenuBar: true
     closeEmptyWindows: false
     disabledPackages: [
       "activate-power-mode"
+      "atomatigit"
+      "autoclose-html"
+      "docblockr"
+      "git-plus"
+      "linter-htmlhint"
+      "project-manager"
+      "linter"
+    ]
+    packagesWithKeymapsDisabled: [
+      "autocomplete-plus"
+      "emmet"
     ]
     themes: [
       "atom-material-ui"
@@ -50,10 +62,11 @@
     override_js_var: true
   editor:
     fontFamily: "consolas"
-    fontSize: 18
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
-    showIndentGuide: true
+    showIndentGuide: false
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "bc2250be-d966-640a-f41b-611f787a3b24"
   "git-plus": {}
@@ -66,8 +79,22 @@
       "git-diffDecorationsZIndex": 0
       linter: true
       linterDecorationsZIndex: 0
+  "open-in-browsers":
+    BrowserPlus: false
+    Edge: true
+    Opera: false
+    Safari: false
+    browsers: [
+      "Edge"
+      "Chrome"
+      "ChromePortable"
+      "Firefox"
+    ]
   welcome:
     showOnStartup: false
+".css.source":
+  editor:
+    softWrapAtPreferredLineLength: false
 ".html.text.vue":
   editor:
     showIndentGuide: false
