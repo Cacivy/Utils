@@ -10,6 +10,7 @@
 |   ├── lib
 |   |    └── styles ( highlight主题 )
 |   └──  index.html
+├── animate ( CSS3动画练习 )
 ├── tools
 |   └──  utils.js ( 通用方法整理 )
 ├── package.json
