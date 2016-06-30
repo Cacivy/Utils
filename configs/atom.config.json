@@ -1,5 +1,17 @@
 /*Atom 1.8.0*/
 
+/*
+解决Atom 编辑同时使用 Emmet 与 Autocomplete Plus 快捷键冲突
+再安装一个叫 autocomplete-snippets 的包。然后在文件或编辑菜单打开 Open Your Keymap ，把下面的内容放到这个文件里面，然后保存一下。
+# Stop emmet from hijacking tab from snippets and autocomplete
+'atom-text-editor.autocomplete-active:not([mini])':
+  'tab': 'autocomplete-plus:confirm'
+
+# Stop emmet from hijacking tab from snippet tab stops
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini])':
+  'tab': 'snippets:next-tab-stop'
+*/
+
 "*":
   "atom-beautify":
     general:
