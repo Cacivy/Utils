@@ -138,24 +138,33 @@ a:link {
   height: 2px;
   background-color: black;
 
+  transition: width .5s ease-out;
   -webkit-animation-name: long; /*动画名称*/
   -webkit-animation-duration: .5s; /*动画持续时间*/
   -webkit-animation-iteration-count: 1; /*动画次数*/
   -webkit-animation-delay: 0s; /*延迟时间*/
 }
+.Logo span:hover:before{
+  width: 0px;
+}
 .Logo span:after{
   content: '';
   position: absolute;
   bottom: -5px;
+  right: 0px;
   width: 60px;
   height: 2px;
   background-color: black;
-
+  transition: right .5s ease-out;
   /*-webkit-transform: rotate(180deg);*/
-  -webkit-animation-name: right; /*动画名称*/
-  -webkit-animation-duration: .5s; /*动画持续时间*/
-  -webkit-animation-iteration-count: 1; /*动画次数*/
-  -webkit-animation-delay: 0s; /*延迟时间*/
+  -webkit-animation-name: right;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+}
+/*Hover动画*/
+.Logo span:hover:after{
+  right: -60px;
 }
 
 @-webkit-keyframes right{
