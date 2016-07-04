@@ -42,7 +42,7 @@ body {
 	right: 20px;
 	bottom: 10px;
 	border-radius: 50%;
-	background-color: #D0648A;
+	background-color: #22C3AA;
 	box-shadow:  0 1px 3px 1px rgba(0,0,0,0.4);
 	width: 50px;
 	height: 50px;
@@ -51,6 +51,9 @@ body {
 	-webkit-animation: rotate 5s linear;
 	animation-delay: 0s;
 	animation-iteration-count: infinite;
+}
+.music:hover{
+	background-color: #D0648A;
 }
 @keyframes rotate
 {
