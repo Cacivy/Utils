@@ -1,0 +1,77 @@
+// bower:scss
+// endbower
+
+$bg-grap: #F8F8F8;
+$bg-white: #fff;
+$max-width: 980px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-grap;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.lattices {
+  margin-top: 200px;
+}
+
+.lattice {
+  $width: $max-width/5-2px;
+  $img-width: 72px;
+  $p-width: 70px;
+  $img-padding: ($width - $img-width)/2;
+
+  background-color: $bg-white;
+  border: 1px solid #eee;
+  width: $width;
+  height: $width;
+  float: left;
+  overflow: hidden;
+
+  img {
+    width: $img-width;
+    height: $img-width;
+    padding: $img-padding - 15px $img-padding 0px;
+  }
+
+  p {
+    height: $p-width;
+    line-height: $p-width;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .bottom {
+    text-align: center;
+
+    div>span {
+      padding: 5px 15px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background-color: #f8f8f8;
+    }
+  }
+  
+  .content {
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: margin-top .3s;
+    -webkit-transition: margin-top .3s;
+  }
+
+  &:hover {
+    .content {
+      margin-top: -120px;    
+    }
+  }
+
+}
+
