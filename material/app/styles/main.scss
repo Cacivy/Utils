@@ -1,0 +1,123 @@
+// bower:scss
+// endbower
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline:none;
+}
+
+$bg-title: #E8E8E8;
+$bg-content: #F7F7F7;
+$color-title: #919191;
+.container {
+  width: 980px;
+  height: 600px;
+  margin: 100px auto 0;
+  border: 1px solid $bg-title;
+  box-shadow: 1px 1px 6px $bg-title;
+  border-radius: 2px;
+  // background-color: $bg-content;
+
+  .title {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: $bg-title;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+    span:nth-child(1) {
+      color: $color-title;
+    }
+
+    span:nth-child(2) {
+      float: right;
+    }
+
+    &:hover + .code {
+        height:400px;
+    }
+  }
+
+  .code{
+    background-color: $bg-content;
+    height: 0px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+
+    &:hover {
+        height:400px;
+    }
+  }
+
+  $width-input: 200px;
+  .content {
+    padding: 40px;
+    width: $width-input;
+
+    .input {
+      position: relative;
+      input[type=text] {
+        border: none;
+        border-bottom: 2px solid #eee;
+        width: $width-input;
+
+          &:focus {
+            + hr{
+              transform: scaleX(1);
+            }
+            &::-webkit-input-placeholder {
+              // bottom: 20px;
+              color: #00BCD4;
+              transform: scale(0.75) translate3d(-35px, -28px, 0px);
+              // font-size: 14px;
+            }
+          }
+          
+          &::-webkit-input-placeholder {
+            font-size: 18px;
+            color: black;
+            font-family: Microsoft YaHei;
+            font-weight: normal;
+            // position: relative;
+            transform: scale(1) translate3d(0px, 0px, 0px);
+
+            transition: all .5s;
+            -webkit-transition: all .5s;
+          }
+        }
+      }
+
+      hr{
+        width: $width-input;
+        border-bottom-width: 2px; border-style: none none solid;
+        border-color: #00BCD4;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform .5s;
+      }
+    }
+    
+}
+
+
