@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         ZhiHuLink
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/Cacivy/utils/blob/master/configs/userscripts.js
 // @version      0.1
-// @description  try to take over the world!
+// @description  直接访问知乎外链
 // @author       Cacivy
-// @match        http://www.zhihu.com/*
-// @include      http://www.zhihu.com/*
-// @match        https://www.zhihu.com/*
-// @include      https://www.zhihu.com/*
+// @match        http://*.zhihu.com/*
+// @include      http://*.zhihu.com/*
+// @match        https://*.zhihu.com/*
+// @include      https://*.zhihu.com/*
 // @grant        none
 // ==/UserScript==
 
