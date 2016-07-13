@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily ZhiHu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .content {
+            width: 500px;
+            margin: 0 auto;
+        }
+        p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="box" v-for="story in news[0].stories">
+            <img :src="story.images[0]" alt="">
+            <p>
+                {{story.title}}
+            </p>
+        </div>
+       
+    </div>
+
+    <script src="lib/moment/moment.min.js"></script>
+    <script src="lib/vue/vue.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var vm=new Vue({
+            el: 'body',
+            data: {
+                news: []
+            },
+            methods: {
+                
+            },
+            ready: function(){
+                //get cache
+                var cacheNews= localStorage.getItem('news')
+                if(cacheNews){
+                    var model=JSON.parse(cacheNews);
+                    if(model.date === moment().format('YYYYMMDD')){
+                        this.news.push(model)
+                        return
+                    }
+                }
+                
+                var url=api.getUrl(apiZhihu.news)
+                fetch(url).then(function(res){
+                    if(res.ok){
+                        return res.json()
+                    }else {
+                        console.error(url)
+                    }
+                }).then(function(data){
+                    vm.news.push(data)
+                    localStorage.setItem('news',JSON.stringify(data))
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
