@@ -1,7 +1,5 @@
 # zhihudaily
 
-> zhihudaily by vue
-
 ### 技术栈
 
 + vue + vue-route + vuex + vue-resource
