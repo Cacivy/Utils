@@ -25,7 +25,6 @@
                 {{story.title}}
             </p>
         </div>
-       
     </div>
 
     <script src="lib/moment/moment.min.js"></script>
@@ -40,7 +39,7 @@
                 news: []
             },
             methods: {
-                
+
             },
             ready: function(){
                 //get cache
@@ -52,7 +51,7 @@
                         return
                     }
                 }
-                
+
                 var url=api.getUrl(apiZhihu.news)
                 fetch(url).then(function(res){
                     if(res.ok){
