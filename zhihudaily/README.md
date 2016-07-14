@@ -8,6 +8,10 @@
 + lodash + moment.js 
 + sass + normalize.css + flex
 
+### 进度
+已完成 列表页、文章页面以及基本布局
+待开发 轮播图控件、文章页返回列表页、专栏、查看评论、顶部/侧边搜索
+
 ## Build Setup
 
 ``` bash
