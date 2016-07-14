@@ -1,8 +1,16 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Router from './router'
+import Filter from './filter'
 import App from './App'
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+Vue.use(VueRouter)
+
+//自定义过滤器
+Filter(Vue)
+
+var router = new VueRouter()
+//Config
+Router(router)
+//Start
+router.start(App, '#root')

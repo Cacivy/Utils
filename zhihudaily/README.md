@@ -1,6 +1,12 @@
 # zhihudaily
 
-> A Vue.js project
+> zhihudaily by vue
+
+### 技术栈
+
++ vue + vue-route + vuex + vue-resource
++ lodash + moment.js 
++ sass + normalize.css + flex
 
 ## Build Setup
 

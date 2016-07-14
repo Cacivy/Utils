@@ -32,6 +32,7 @@ var req = http.request(opt, function(res) {
   console.log(body)
   console.log('------------------------------')
 
+  body.replace(/http\w{0,1}:\/\/pic/g, "https://images.weserv.nl/?url=pic")
   response.write(body)
   response.end()
  });
