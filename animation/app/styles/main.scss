@@ -1,9 +1,16 @@
 // bower:scss
 // endbower
 
+@import "lattice";
+@import "huxiu";
+@import "logo";
+@import "search";
+@import "material";
+@import "loading";
+
 $bg-gray: #F8F8F8;
 $bg-white: #fff;
-$max-width: 1280px;
+$max-width: 1080px;
 
 * {
   margin: 0;
@@ -33,280 +40,20 @@ input {
   position: relative;
   margin: 20px 0;
   background-color: $bg-gray;
-  display: inline-block;
-  padding: 20px;
-  margin: 0 20px;
-  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 3px;
+  float: left;
+  box-shadow: 0 0 .5em #5d656c;
   
   &:nth-of-type(2) {
     width: 200px;
-    height: 250px;
+    height: 240px;
     
-    >.huxiu {
+    .huxiu {
       position: absolute;
       bottom: 20%;
       left: 40%;
     }
   }
 }
-
-.lattice {
-  $width: $max-width/5-2px;
-  $img-width: 72px;
-  $p-width: 70px;
-  $img-padding: ($width - $img-width)/2;
-  
-  background-color: $bg-white;
-  border: 1px solid #eee;
-  width: $width;
-  height: $width;
-  float: left;
-  overflow: hidden;
-
-  img {
-    width: $img-width;
-    height: $img-width;
-    padding: $img-padding - 15px $img-padding 0px;
-  }
-
-  p {
-    height: $p-width;
-    line-height: $p-width;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .bottom {
-    text-align: center;
-
-    div>span {
-      padding: 5px 15px;
-      height: 24px;
-      line-height: 24px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      background-color: #f8f8f8;
-    }
-  }
-  
-  .content {
-    cursor: pointer;
-    height: $width+20px;
-    overflow: hidden;
-    transition: margin-top .3s;
-    -webkit-transition: margin-top .3s;
-  }
-
-  &:hover {
-    .content {
-      margin-top: -150px;
-    }
-  }
-
-}
-
-.huxiu {
-    $bg-out: #343A40;
-    $bg-hover: #7B8894;
-    $width-icon: 40px;
-  position: absolute;
-  background-color: $bg-out;
-  border-radius: 50px;
-  height: $width-icon;
-  width: $width-icon;
-
-  &:before {
-    content: '';
-    height: 40px;
-    width: 40px;
-    background-color: $bg-hover;
-    border-radius: 50px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-    opacity: 0;
-    transform: scale(0);
-    transition: .5s cubic-bezier(.3,0,0,1.3);
-  }
-
-  &:hover:before {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  $width-qrcode: 134px;
-  .app-qrcode {
-    opacity: 0;
-    position: absolute;
-    top: -150px;
-    left: - ($width-qrcode - $width-icon) /2;
-    transition: all .5s;
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      border: 8px solid transparent;
-      border-top: 10px solid #fff;
-      top: 129px;
-      left: 57px
-    }
-  }
-
-  &:hover .app-qrcode {
-    opacity: 1;
-    top: -140px;
-  }
-  .icon {
-    height: $width-icon;
-    width: $width-icon;
-    display: inline-block;
-    background-image: url(/images/icon.png);
-    background-position: 12px -185px;
-    background-repeat: no-repeat;
-    vertical-align: text-bottom;
-    position:relative;
-    z-index:1;
-
-    &:hover {
-      background-position: 12px -226px;
-    }
-  }
-}
-
-.logo {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 100px;
-
-  span {
-    font-size: 25px;
-    position: relative;
-   
-  @mixin logohr {
-    content: '';
-    height: 2px;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    -webkit-animation-duration: 1s; /*动画持续时间*/
-    -webkit-animation-iteration-count: 1; /*动画次数*/
-    -webkit-animation-delay: .5s; /*延迟时间*/
-  }
-
-    
-  &:hover {
-   width: 0;
-    
-    &:before {
-      width: 0px;
-    }
-
-    &:after {
-      width: 0px;
-      left: 100%;
-    }
-  }
-
-   &:before {
-     @include logohr;
-     top: -3px;
-     -webkit-animation-name: progress; /*动画名称*/
-     transition: width .5s linear;
-   }
-   &:after {
-     @include logohr;
-     bottom: -4px;
-     -webkit-animation-name: left; /*动画名称*/
-    transition: all .5s linear;
-   }
-
-  }
-
-  @-webkit-keyframes progress {
-    from {width: 0}
-    to {width: 100%}
-  }
-  @-webkit-keyframes left {
-    from {width: 0;left:100%;}
-    to {width: 100%;left:0;}
-  }
-}
-
-.search{
-  width: 200px;
-  float: right;
-  line-height: 80px;
-  margin-right: 8%;
-  display: inline-block;
-}
-#search{
-  width:120px;
-  height:30px;
-  padding: 0px 15px 0px 15px;
-  border: 1px solid #eee;
-  border-radius:25px;
-  outline: none;
-  float: right;
-  transition:width .6s,border .5s;
-}
-#search:focus{
-  width: 150px;
-  border: 2px solid #0099FF;
-}
-
-
-$width-input: 200px;
-.material {
-  padding: 40px;
-  width: $width-input;
-  background-color: $bg-white;
-
-  .input {
-    position: relative;
-    input[type=text] {
-      border: none;
-      border-bottom: 2px solid #eee;
-      width: $width-input;
-
-        &:focus {
-          + hr{
-            transform: scaleX(1);
-          }
-          &::-webkit-input-placeholder {
-            // bottom: 20px;
-            color: #00BCD4;
-            transform: scale(0.75) translate3d(-35px, -28px, 0px);
-            // font-size: 14px;
-          }
-        }
-        
-        &::-webkit-input-placeholder {
-          font-size: 18px;
-          color: black;
-          font-family: Microsoft YaHei;
-          font-weight: normal;
-          // position: relative;
-          transform: scale(1) translate3d(0px, 0px, 0px);
-
-          transition: all .5s;
-          -webkit-transition: all .5s;
-        }
-      }
-    }
-
-    hr{
-      width: $width-input;
-      border-bottom-width: 2px; border-style: none none solid;
-      border-color: #00BCD4;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: scaleX(0);
-      transition: transform .5s;
-    }
-  }
