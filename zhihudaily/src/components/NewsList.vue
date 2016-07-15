@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       news: [],
+      topics: [],
       loading: false
     }
   },
@@ -47,8 +48,8 @@ export default {
   methods: {
     getNews() {
       this.loading= true
-      let lastdate= this.news[this.news.length-1].date
-      let date= moment(lastdate,'YYYYMMDD').add(-1, 'days').format('YYYYMMDD')
+      let date= this.news[this.news.length-1].date
+      //let date= moment(lastdate,'YYYYMMDD').add(-1, 'days').format('YYYYMMDD')
       api.getNewsByDate(date).then(res => {
         let news= JSON.parse(res.data)
         this.news.push(news)
@@ -76,22 +77,45 @@ export default {
     }
   },
   ready() {
+    //获取当日热闻
     const cacheName= 'news'
     let cacheNews= localStorage.getItem(cacheName)
     if(cacheNews){
       let news= JSON.parse(cacheNews)
       if(news.date === moment().format('YYYYMMDD')){
         this.news.push(news)
-        return
       }
     }
+    //更新缓存
     api.getNews().then(res => {
       if(res.ok){
         let news= JSON.parse(res.data)
-        this.news.push(news)
+        if(!this.news.length){
+          this.news.push(news)
+        }
+        
         localStorage.setItem(cacheName,res.data)
+      }else{
+        console.error('新闻获取失败'+res.statusText)
       }
     })
+
+    //主题日报缓存
+    const cacheTopicName= 'topics'
+    let cacheTopics= localStorage.getItem(cacheTopicName)
+    if(cacheTopics){
+      this.topics= JSON.parse(cacheTopics)
+    }else{
+      api.getTopics().then(res => {
+        if(res.ok){
+          let topics= JSON.parse(res.data)
+          this.topics= topics.others
+          localStorage.setItem(cacheTopicName,JSON.stringify(this.topics))
+        }else {
+          console.error('主题日报获取失败'+res.statusText)
+        }
+      })
+    }
   }
 }
 </script>
