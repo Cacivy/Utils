@@ -15,7 +15,7 @@ body {
 
 #app {
 	min-height: 100%;
-	width: 60em;
+	width: 640px;
 	margin: 0 auto;
 	padding-bottom: 10px;
 	background-color: $color-white;
@@ -70,6 +70,7 @@ body {
 				display: inline-block;
 				vertical-align: top;
 				font-size: 16px;
+				width: 400px;
 			}
 
 			em {
@@ -88,6 +89,7 @@ body {
 		background-color: $color-light;
 		border-radius: 5px;
 		cursor: pointer;
+		position: relative;
 	}
 
 	.detail {
@@ -97,39 +99,3 @@ body {
 	}
 }
 
-.float {
-	position: fixed;
-	right: 20em;
-	bottom: 10%;
-	
-	$color-topicon: #AAA;
-	$width-top: 38px;
-	.top {
-		width: $width-top;
-		height: $width-top;
-		background-color: $color-light;
-		border-radius: 3px;
-		position: relative;
-		cursor: pointer;
-
-		.arrow {
-			border: 9px solid transparent;
-			border-bottom-color: $color-topicon;
-			position: absolute;
-			top: 0;
-			left: 10px;
-		}
-		.stick {
-			width: 9px;
-			height: 15px;
-			background-color: $color-topicon;
-			position: absolute;
-			top: 16px;
-			left: 15px;
-		}
-
-		&:hover {
-			opacity: .7;
-		}
-	}
-}

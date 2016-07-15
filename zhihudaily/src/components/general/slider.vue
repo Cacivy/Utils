@@ -2,7 +2,7 @@
 	<div class="sliders">
 		<div class="slider" v-for="item in list">
 			<img :src="item.image | zhihuimg">
-			<p> {{item.title}} </p>
+			<p v-link="{ path: item.url}"> {{item.title}} </p>
 		</div>
 	</div>
 </template>
@@ -30,7 +30,7 @@
 .sliders {
 	overflow: hidden;
 	width: 100%;
-	height: 480px;
+	height: 640px;
 	margin: 10px 0;
 
 	.slider {
@@ -38,7 +38,7 @@
 
 		img {
 			width: 100%;
-			height: 480px;
+			height: 640px;
 		}
 		
 		p {
@@ -49,6 +49,7 @@
 			bottom: 10px;
 			left: 15%;
 			color: #fff;
+			cursor: pointer;
 		}
 	}
 }

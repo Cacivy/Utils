@@ -6,25 +6,24 @@
     			<a v-link="{ path: '/list' }">知乎日报</a>
     		</h1>
     	</div>
-        <div class="float">
-            <div class="top" onclick="javascript:scroll(0,0)">
-                <div class="arrow"></div>
-                <div class="stick"></div>
-            </div>
-        </div>
-
+    
       <router-view></router-view>
+      <float></float>
     </div>
 
  </template>
 
 <script>
 import './css/root.scss'
+import float from './components/general/float'
 
 export default {
 	ready() {
 		this.$router.go({path: '/list'})
-	}
+	},
+    components: {
+        float
+    }
 }
 
 </script>
