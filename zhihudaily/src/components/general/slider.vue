@@ -37,7 +37,6 @@ export default {
 </script>
 	
 <style lang="scss">
-
 .swiper-container {
     width: 640px;
     height: 640px;
