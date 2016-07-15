@@ -7,29 +7,11 @@
 + sass + normalize.css + flex
 
 ### 进度
-已完成 列表页、文章页面以及基本布局
-待开发 轮播图控件、文章页返回列表页、专栏、查看评论、顶部/侧边搜索
+已完成 列表页、文章页面以及基本布局、返回首页、加载动画
+待开发 轮播图控件、、专栏、查看评论、顶部/侧边搜索
 
-## Build Setup
+### show
 
-``` bash
-# install dependencies
-npm install
+![](./src/assets/screenshots/list.gif)
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![](./src/assets/screenshots/detail.gif)

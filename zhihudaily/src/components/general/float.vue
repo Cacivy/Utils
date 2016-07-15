@@ -1,14 +1,21 @@
 <template>
 	<div class="float">
-	    <div class="top" id="gotop">
+	    <div class="gotop" id="gotop" title="返回顶部">
 	        <div class="arrow"></div>
 	        <div class="stick"></div>
 	    </div>
-	    <div v-if="$route.path!=='/list'" class="home" v-link="{ path: '/list' }">
+	    <div v-if="$route.path!=='/list'" title="返回主页" class="gohome" v-link="{ path: '/list' }">
 	    	<div class="arrow"></div>
 	    	<div class="stick"></div>
 	    </div>
-	</div>
+	    <div v-else class="gotopic" title="主题日报">
+			<div class="container">
+				<hr>
+				<hr>
+				<hr>
+			</div>
+	    </div>
+	</div> 
 </template>
 <script>
 	export default {
@@ -44,6 +51,7 @@
 		
 		$color-light: #F9F9F9;
 		$color-topicon: #AAA;
+		$color-blue: #008BED;
 		$width-top: 38px;
 
 		@mixin float-div {
@@ -64,7 +72,7 @@
 			left: $left;
 		}
 
-		.top {
+		.gotop {
 			@include float-div;
 
 			.arrow {
@@ -84,7 +92,7 @@
 			}
 		}
 
-		.home {
+		.gohome {
 			@include float-div;
 
 			.arrow {
@@ -104,6 +112,34 @@
 
 			&:hover {
 				opacity: .7;
+			}
+		}
+
+		.gotopic {
+			@include float-div;
+
+			&:hover .container>hr{
+				background: $color-blue;
+				opacity: .7;
+			}
+
+			.container {
+				width: $width-top - 10px;
+				height: 26px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+
+				hr {
+					display: block;
+					height: 2px;
+					width: $width-top - 10px;
+					background: black;
+					margin-top:5px;
+				}
 			}
 		}
 	}
