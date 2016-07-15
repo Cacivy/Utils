@@ -1,22 +1,24 @@
 <template>
-  <div class="news" v-for="item in news">
-    <h3>{{item.date | moment}}</h3>
-    <slider v-if="!$index" :list="imglist"></slider>
+  <div class="news" v-for="(index,item) in news">
+    <h3 v-if="index">{{item.date | moment}}</h3>
+    <slider v-if="!index" :list="imglist"></slider>
     <listitem v-for="new in item.stories" :new="new"></listitem>
   </div>
   <div class="more" @click="getNews" v-if="news.length">
-    {{ loading? "正在加载": "加载更多" }}
+    <loading :mask="false" v-if="loading"></loading>
+    <span v-else>加载更多</span>
   </div>
  </template>
 
 <script>
 import api from '../api/index'
 import moment from 'moment'
-import listitem from './general/listitem.vue'
+import listitem from './general/listitem'
 import slider from './general/slider'
+import loading from './general/loading'
 
 export default {
-  components: { listitem,slider },
+  components: { listitem,slider,loading },
   data() {
     return {
       news: [],
@@ -49,6 +51,25 @@ export default {
         this.news.push(news)
         this.loading= false
       })
+    }
+  },
+  watch: {
+    news(val){
+      var imgs = document.getElementsByTagName('img');
+      // 获取视口高度与滚动条的偏移量
+      function lazyload(){
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        var viewportSize = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        for(var i=0; i<imgs.length; i++) {
+          var x =scrollTop+viewportSize-imgs[i].offsetTop
+          var data=imgs[i].getAttribute('data')
+          if(x>0 && data){
+            imgs[i].src = data;
+            imgs[i].setAttribute('data','')
+          }
+        }
+      }
+      setInterval(lazyload,1000)
     }
   },
   ready() {
