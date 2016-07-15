@@ -31,10 +31,10 @@
 + Material Theme 主题
 + SideBarEnhancements 侧边栏增强
 + Vue Snippets Vue语法支持
++ Vue Syntax Highlight vue单文件语法高亮
 + JsF ormat 格式化js
 + Babel 支持ES6
 + HTML-CSS-JS Prettify 格式化代码
-+ Vue Syntax Highlight vue单文件语法高亮
 
 ### Atom
 
