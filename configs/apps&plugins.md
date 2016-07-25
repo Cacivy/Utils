@@ -52,11 +52,28 @@
 
 ### vs Code
 
-
 + jslint
 + vue
 + babel
 + C#
 
+### Windows
 
++ 为知笔记
++ shadowsocks
++ github for desktop
++ everything
++ wox
++ cmder
++ mactype
++ typora
++ seer
+
+
+### mac
+
++ iterm2
++ mou
++ shadowsocksX
++ CheatSheet
 
