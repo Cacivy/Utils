@@ -49,3 +49,5 @@ build/
 node_modules/
 dist/
 *.log
+images/
+.vscode
