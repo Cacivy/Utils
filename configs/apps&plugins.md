@@ -19,9 +19,8 @@
 + Create Link 多种方式生成链接
 + ColorPick Eyedropper 页面颜色选取
 + Clear Cache 一键清除缓存
-+ Vue.js devtools vue开发
-+ Google Keep
-+ PostMan
++ Vue.js devtools vue开发调试
++ Google Keep 记事/清单
 
 ### Sublime Text3 
 
@@ -52,14 +51,27 @@
 
 ### vs Code
 
-+ jslint
 + vue
 + babel
 + C#
++ eslint
++ pug snippets
++ vscode-icons
++ Material-theme
++ beautify
+
+### 开发工具
++ git
++ sourcetree/github desktop
++ robomongo
++ navicat for mysql
++ postman
++ cmder
 
 ### Windows
 
 + 为知笔记
++ onenote
 + shadowsocks
 + github for desktop
 + everything
@@ -68,6 +80,7 @@
 + mactype
 + typora
 + seer
++ yomail
 
 
 ### mac
@@ -76,4 +89,6 @@
 + mou
 + shadowsocksX
 + CheatSheet
++ youdao
+
 
