@@ -1,0 +1,5 @@
+// VSCODE 将设置放入此文件中以覆盖默认设置
+{
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Consolas, 微软雅黑"
+}
