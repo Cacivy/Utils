@@ -1,0 +1,8 @@
+// VSCODE 将键绑定放入此文件中以覆盖默认值
+[
+    {
+        "key": "shift+ctrl+f",
+        "command": "editor.action.format",
+        "when": "editorTextFocus"
+    }
+]
