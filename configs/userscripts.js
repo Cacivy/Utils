@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ZhiHuLink
 // @namespace    https://github.com/Cacivy/utils/blob/master/configs/userscripts.js
-// @version      0.1
+// @version      0.5
 // @description  直接访问知乎外链
 // @author       Cacivy
 // @match        http://*.zhihu.com/*
@@ -14,7 +14,6 @@
 (function() {
     'use strict';
     // Your code here...
-    var arr = [];
     var loading = false;
     redirect();
     setInterval(function() {
@@ -24,18 +23,14 @@
     function redirect() {
         if (!loading) {
             loading = true;
-            var links = document.getElementsByTagName('a');
+            var links = document.querySelectorAll("a[href*='//link.zhihu.com']");
             var href;
             var length = links.length;
             for (var i = 0; i < length; i++) {
-                if (arr.indexOf(links[i]) > -1) {
-                    continue;
-                }
                 href = links[i].getAttribute('href');
-                if (href && href.indexOf('//link.zhihu.com') > -1) {
+                if (href) {
                     links[i].setAttribute('href', unescape(href.split('target=')[1]));
                 }
-                arr.push(links[i]);
             }
             loading = false;
         }
