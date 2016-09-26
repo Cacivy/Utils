@@ -35,6 +35,7 @@
 + Babel 支持ES6
 + HTML-CSS-JS Prettify 格式化代码
 + IMESupport 解决中文输入法不跟随光标的问题
++ GitGutter (Git diff)
 
 ### Atom
 
