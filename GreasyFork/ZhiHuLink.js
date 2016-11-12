@@ -1,11 +1,9 @@
 // ==UserScript==
 // @name         ZhiHuLink
 // @namespace    https://github.com/Cacivy/utils/blob/master/configs/userscripts.js
-// @version      0.5
+// @version      0.7
 // @description  直接访问知乎外链
 // @author       Cacivy
-// @match        http://*.zhihu.com/*
-// @include      http://*.zhihu.com/*
 // @match        https://*.zhihu.com/*
 // @include      https://*.zhihu.com/*
 // @grant        none
