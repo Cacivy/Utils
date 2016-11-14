@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ZhiHuLink
-// @namespace    https://github.com/Cacivy/utils/blob/master/configs/userscripts.js
+// @namespace    https://github.com/Cacivy/utils/blob/master/GreasyFork/ZhiHuLink.js
 // @version      0.7
 // @description  直接访问知乎外链
 // @author       Cacivy
