@@ -1,5 +1,19 @@
-// VSCODE 将设置放入此文件中以覆盖默认设置
+// 将设置放入此文件中以覆盖默认设置
 {
-    "editor.fontSize": 18,
-    "editor.fontFamily": "Consolas, 微软雅黑"
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "editor.fontSize": 16,
+    "svgviewer.transparencygrid": true,
+    "git.confirmSync": false,
+    "typescript.check.tscVersion": false,
+    "workbench.activityBar.visible": true,
+    "editor.tabSize": 2,
+    "editor.mouseWheelZoom": true,
+    "window.showFullPath": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true
+    }
 }
